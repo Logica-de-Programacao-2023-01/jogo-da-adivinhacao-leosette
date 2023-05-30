@@ -20,7 +20,8 @@ func main() {
 			fmt.Print("Digite um número: ")
 			var palpite int
 			_, err := fmt.Scan(&palpite)
-			if err != nil {
+			if err != nil || palpite < 1 || palpite > 100 {
+				fmt.Println("Entrada inválida. Digite um número entre 1 e 100.")
 				continue
 			}
 
